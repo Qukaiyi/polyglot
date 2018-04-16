@@ -28,6 +28,7 @@ class Language(object):
     self.locale = Locale(code)
     self.confidence = float(confidence)
     self.read_bytes = int(bytesize)
+    self.locale.setDefault(self.locale.getEnglish())
 
   @property
   def name(self):
